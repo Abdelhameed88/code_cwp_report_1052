@@ -46,7 +46,5 @@ This project requires the following key Python packages:
 ```bash
 python train_mod1.py -ds kimberlina -n YOUR_DIRECTORY -m YOUR_NETWORK --tensorboard -t train.txt -v val_noiseFree.txt
 
-### To test a trained model
-```bash
 python test.py -ds kimberlina -n YOUR_DIRECTORY -m YOUR_NETWORK -v val_noiseFree.txt -r checkpoint.pth --vis -vb 2 -vsa 3
 
