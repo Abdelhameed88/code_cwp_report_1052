@@ -1,42 +1,52 @@
-# Reproducble code for cwp report 1052
-The code used to produce the results of CWP report 1052 - May 2025
+# Reproducible Code for CWP Report 1052
+This repository contains the code used to produce the results of **CWP Report 1052** (May 2025).
 
-## Contact information:
+## Contact Information
 
-- Name: Ahmed Ahmed
+- **Name**: Ahmed Ahmed  
+- **Email**: [your-email@example.com]
 
-- email: ahmedmohamedahmed@mines.edu
-
-```markdown
 ## Dependencies
 
-This project requires the following key packages:
+This project requires the following key Python packages:
 
-- Python
+- Python 3.8+
 - PyTorch >= 1.10
 - torchvision
 - numpy, scipy, matplotlib
 - scikit-learn
 - tensorboard
 - Custom modules: `utils.py`, `network.py`, `transforms.py`, `dataset.py`, `scheduler.py`, `vis.py`
-````
-## The project steps:
 
-- Preprocessing step (01_Preprocessing): provided Jupyter notebooks for model detrending
+## Project Structure and Steps
 
-- Wavelet transform for model compression and reconstruction (02_model_compression_reconstruction): provided Jupyter notebook for the testing of five wavelet basis functions (Haar, DB2, Sym2, Coif2, Biorth)
+### 1. Preprocessing (`01_Preprocessing`)
+- Includes Jupyter notebooks for model detrending and data preparation.
 
-- Training multirsolution neural networks (03_Multiresolution_network): two directories provided
+### 2. Wavelet Transform for Model Compression and Reconstruction (`02_model_compression_reconstruction`)
+- Jupyter notebooks are provided to test five wavelet basis functions:
+  - Haar
+  - Daubechies 2 (DB2)
+  - Symlets 2 (Sym2)
+  - Coiflets 2 (Coif2)
+  - Biorthogonal
 
-        1- "2Encoder_4Decoder" includes the required codes to train a neural network for four models simultaneously from the model reconstructed with base level up to the model reconstructed with three levels of decomposition.
-        2- "2Encoder_2Decoder" includes the required codes to train a neural network for two models simultaneously, the model reconstructed with four and five levels of decomposition.
+### 3. Training Multiresolution Neural Networks (`03_Multiresolution_network`)
+- Two training configurations are provided:
+  
+  **a. `2Encoder_4Decoder`**  
+  - Trains a neural network on four models reconstructed from levels 0 to 3 of the wavelet decomposition.
 
-To start train a network from scratch:
+  **b. `2Encoder_2Decoder`**  
+  - Trains a neural network on two models reconstructed from levels 4 and 5.
 
+## Training and Testing Instructions
+
+### To Train a Model from Scratch
+```bash
 python train_mod1.py -ds kimberlina -n YOUR_DIRECTORY -m YOUR_NETWORK --tensorboard -t train.txt -v val_noiseFree.txt
 
-To test the trained model
-
+### To test a trained model
+```bash
 python test.py -ds kimberlina -n YOUR_DIRECTORY -m YOUR_NETWORK -v val_noiseFree.txt -r checkpoint.pth --vis -vb 2 -vsa 3
-
 
