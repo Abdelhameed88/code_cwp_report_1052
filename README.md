@@ -4,7 +4,7 @@ This repository contains the code used to produce the results of **CWP Report 10
 ## Contact Information
 
 - **Name**: Ahmed Ahmed  
-- **Email**: [your-email@example.com]
+- **Email**: ahmedmohamedahmed@mines.edu
 
 ## Dependencies
 
