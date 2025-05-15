@@ -19,8 +19,8 @@ This project requires the following key packages:
 - scikit-learn
 - tensorboard
 - Custom modules: `utils.py`, `network.py`, `transforms.py`, `dataset.py`, `scheduler.py`, `vis.py`
-
-The project contains three main steps:
+````
+## The project steps:
 
 - Preprocessing step (01_Preprocessing): provided Jupyter notebooks for model detrending
 
