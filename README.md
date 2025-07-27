@@ -1,5 +1,5 @@
 # Reproducible Code for CWP Report 1052
-This repository contains the code used to produce the results of **CWP Report 1052** (May 2025).
+This repository contains the code used to produce the results of **CWP Report 1052** (May 2025) title: Efficient Multiparameter Seismic Monitoring using Wavelet1 Transforms and Machine Learning: A Double-Compression Approach
 
 ## Contact Information
 
